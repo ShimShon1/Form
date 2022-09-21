@@ -8,14 +8,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-   
-    <title>Document</title>
+    <title>Burger Form</title>
 </head>
 <body>
     <main>
         <div class = "image">
+            
             <div>
-                <h1>Burger   </h1>
+                <h1>Burger</h1>
                <img src="logo.png" alt="">
                 </span>
 
@@ -33,20 +33,17 @@
 
                 </h3>
 
-
-            <h3>
-                you know you want to.
-            </h3>
+                <h3>
+                    you know you want to.
+                </h3>
            </header>
 
-
-           
-           <form action="">
+           <form action="" onsubmit="gay()">
             <h3>let's do it!</h3>
             <div class="input-container">
                 <div class="form-sec">
                     <label for="name">First Name</label>
-                    <input id="name" type="text">
+                    <input id="name" minlength="3" type="text">
                 </div>
                 <div class="form-sec">
                     <label for="last-name">Last Name</label>
@@ -58,21 +55,28 @@
                 </div>
                 <div class="form-sec">
                     <label for="phone-number">Phone Number</label>
-                    <input type="tel" id="phone-number">
+                    <input type="tel" id="phone-number" minlength="7">
                 </div>
                 <div class="form-sec">
                     <label for="pass">Password</label>
-                    <input type="password" id="pass">
+
+                    <img  class="pass-view" src="eye.svg" alt="" srcset="">
+
+                    <input type="password" id="pass" minlength="5">
                 </div>
                 <div class="form-sec">
                     <label for="pass-conf">Confirm Password</label>
-                    <input type="password" id="pass-conf">
+                   
+                    <img  class="pass-view" src="eye.svg" alt="" srcset="">
+                
+                    <input type="password" id="pass-conf" minlength="5">
 
+                    
                 </div>
 
+                <p class="pass-error">Your Password Are Not Matching!</p>
             </div>
 
-            
                 <div class="sub">
                     <button type="submit">Create Account</button>
                     <p>already have an account? <a href="">log in</a></p>
@@ -80,6 +84,60 @@
 
            </form>
         </div>
+
+
+        <script>
+            let pass1 = document.querySelector("#pass")
+            let pass2 = document.querySelector("#pass-conf")
+            let passError = document.querySelector(".pass-error")
+
+
+            
+            function gay(){
+                let pass1Val = document.querySelector("#pass").value
+                let pass2Val = document.querySelector("#pass-conf").value
+            
+                if (pass1Val != pass2Val){
+                    event.preventDefault()
+                    passError.style.opacity = "1"
+                    pass1.style['border'] = "1px solid red"
+                    pass2.style['border'] = "1px solid red"
+                }
+            
+            }
+
+
+            let show = document.querySelectorAll(".pass-view")
+
+            console.log(show)
+
+
+                
+
+                show[0].addEventListener("click",function(){
+                        if (pass1.type == 'password'){
+                            console.log("nigga")
+                            pass1.type = "text"
+                        }else{
+                            pass1.type = "password"
+                        }
+                   
+                }
+                
+            )
+
+            show[1].addEventListener("click",function(){
+                        if (pass2.type == 'password'){
+                            console.log("nigga")
+                            pass2.type = "text"
+                        }else{
+                            pass2.type = "password"
+                        }
+                   
+                }
+                
+            )
+        </script>
     </main>
 </body>
 </html>
