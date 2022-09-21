@@ -1,0 +1,176 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: px;
+    
+}
+
+
+main{
+    /* background-color: grey; */
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    background-color: rgb(20, 20, 20);
+    overflow: hidden;
+}
+.image div{
+    overflow: hidden;
+    text-align: center;
+    font-size: 2rem;
+    color: rgb(255, 250, 250);
+    background-color: rgba(0, 0, 0, 0.404);
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    letter-spacing: 0.2rem;
+    width: 100%;
+    margin-top: 35%;
+    font-family:  cursive;
+
+
+    
+}
+
+h1{
+    margin-right: 2%;
+}
+.image{
+    width: 35%;
+    height: 100vh;
+    background-image: url("burger2.avif");
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+   
+}
+
+
+
+.full-form{
+    
+    width: 65%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+    margin-top: 5%;
+    
+    
+}
+
+form{
+   
+    /* height: 100vh; */
+    flex-grow: 5;
+}
+h3{
+    font-size: 2rem;
+    width: 70%;
+    /* color: rgb(212, 179, 179); */
+}
+
+header{
+    flex-grow: 1;
+    position: relative;
+    margin-left: 4%;
+   
+
+}
+label{
+    display: block;
+    letter-spacing: 0.15rem;
+}
+
+
+.input-container{
+    display:flex;
+    width: 80%;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+input{
+    font:inherit;
+    color:white;
+    height: 53%;
+    width: 60%;
+    border-radius: 6px;
+    background-color: rgb(102, 102, 102);
+}
+
+.input-container div{
+    width: 43%;
+    margin-left: 5%;
+
+}
+button{
+    padding: 1rem;
+    width: 20%;
+    margin: 2% 0% 0% 4%;
+    border-radius: 9px;
+    font-size: 1.2rem;
+    border: none;
+    background-color: rgb(207, 119, 119);
+}
+
+
+.sub{
+    border-top: 0.5px solid rgb(180, 177, 177);
+    margin-top: 9%;
+    background-color: rgb(18, 18, 18);
+    width: 100%;
+    height: 100%;
+
+    font-size: 1.2rem;
+}
+
+.sub > p {
+    margin-left: 4%;
+}
+
+
+
+form > h3{
+    margin-left: 4%;
+    color: rgb(212, 179, 179);
+}
+
+a{
+    color: rgb(218, 125, 125);
+    text-decoration: none;
+    
+}
+
+img{
+    height: 90px;
+    width: 90px;
+}
+
+
+@media screen and (max-width: 992px) {
+    html{
+      font-size: 10px;
+    }
+
+
+    .input-container div{
+        width: 80%;
+        margin-left: 5%;
+        font-size: 1.2rem;
+
+    }
+
+    @media screen and (max-width: 992px) {
+        html{
+          font-size: 7px;
+        }
+  }
